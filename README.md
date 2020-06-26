@@ -1,2 +1,2 @@
-# autosuspend
-Oxwall software plugin. Automatically suspends users with more than X flags.
+# modnotes
+Autosuspend plugin for Oxwall. Automatically suspends users whose profile has been flagged a certain number of times.

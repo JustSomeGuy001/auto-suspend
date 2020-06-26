@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+    <name>Autosuspend</name>
+    <key>autosuspend</key>
+    <description>Automatically suspend users whose profiles have been flagged X times.</description>
+    <author>Dev Forward</author>
+    <authorEmail>devforward20@gmail.com</authorEmail>
+    <authorUrl>http://www.oxwall.org/foundation</authorUrl>
+    <developerKey>6dba00bb173227638643427ea9151b9c</developerKey>
+    <build>1.02</build>
+    <copyright>(C) 2020</copyright>
+    <license>The 3-Clause BSD License</license>
+    <licenseUrl>https://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+</plugin>

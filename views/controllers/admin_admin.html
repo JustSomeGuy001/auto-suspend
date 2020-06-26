@@ -1,0 +1,46 @@
+<style>
+    .center-text {
+        text-align: center;
+    }
+    
+    td.color-whitesmoke {
+        background-color: whitesmoke;
+    }
+</style>
+<h3 class="center-text">{text key="autosuspend+admin_page_current_settings"}</h3><br>
+<table class="ow_table_1 ow_automargin center-text">
+    <tr class="{cycle values='ow_alt1,ow_alt2'}">
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_max_flags"}</b></td>
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_cron_frequency"}</b></td>
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_suspend_reason"}</b></td>
+    </tr>
+    <tr>
+        <td class="color-whitesmoke">{$maxFlags}</td>
+        <td class="color-whitesmoke">{$cronFrequency}</td>
+        <td class="color-whitesmoke">{$suspendMessage}</td>
+    </tr>
+    <tr class="{cycle values='ow_alt1,ow_alt2'}">
+        <td><i>{text key="autosuspend+admin_page_max_flags_explanation"}</i></td>
+        <td><i>{text key="autosuspend+admin_page_cron_frequency_explanation"}</i></td>
+        <td><i>{text key="autosuspend+admin_page_suspend_reason_explanation"}</i></td>
+    </tr>
+</table>
+<br>
+<br>
+<h3 class="center-text">{text key="autosuspend+admin_page_update_settings"}</h3><br> {form name='update_settings'}
+<table class="ow_table_1 ow_form ow_automargin center-text">
+    <tr class="ow_alt1">
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_max_flags"}</b></td>
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_cron_frequency"}</b></td>
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_suspend_reason"}</b></td>
+    </tr>
+    <tr class="ow_alt1">
+        <td class="ow_value">{input name='newMaxFlags'}</td>
+        <td class="ow_value">{input name='newCronFrequency'}</td>
+        <td class="ow_value">{input name='newSuspendMessage'}</td>
+    </tr>
+    <tr>
+        <td class="ow_center" colspan="3">{submit name='add' class='ow_button ow_ic_save'}</td>
+    </tr>
+</table>
+{/form}
