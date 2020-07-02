@@ -6,41 +6,96 @@
     td.color-whitesmoke {
         background-color: whitesmoke;
     }
+    
+    td.extra-wide {
+        width: 50%;
+    }
+    
+    ul.ow_checkbox_group li {
+        float: none;
+        text-align: left;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+    
+    tr.background-grey {
+        background-color: grey;
+    }
+    
+    .white-text {
+        color: white;
+        font-size: medium;
+    }
+    
+    .font-medium {
+        font-size: medium;
+    }
+    
+    .width-20 {
+        width: 20%;
+    }
+    
+    .no-flags {
+        color: red;
+    }
 </style>
-<h3 class="center-text">{text key="autosuspend+admin_page_current_settings"}</h3><br>
-<table class="ow_table_1 ow_automargin center-text">
-    <tr class="{cycle values='ow_alt1,ow_alt2'}">
+<table class="ow_table_1 ow_automargin center-text card">
+    <tr class="background-grey">
+        <td colspan="5">
+            <h3 class="center-text white-text"><br>{text key="autosuspend+admin_page_current_settings"}<br><br></h3>
+        </td>
+    </tr>
+    <tr class="{cycle values='ow_alt1,ow_alt2'} font-medium">
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_flags_to_check"}</b></td>
         <td class="ow_value"><b>{text key="autosuspend+admin_page_max_flags"}</b></td>
+        <td class="ow_value"><b>{text key="autosuspend+admin_page_suspend_mods"}</b></td>
         <td class="ow_value"><b>{text key="autosuspend+admin_page_cron_frequency"}</b></td>
         <td class="ow_value"><b>{text key="autosuspend+admin_page_suspend_reason"}</b></td>
     </tr>
     <tr>
-        <td class="color-whitesmoke">{$maxFlags}</td>
-        <td class="color-whitesmoke">{$cronFrequency}</td>
-        <td class="color-whitesmoke">{$suspendMessage}</td>
+        <td class="color-whitesmoke width-20">
+            {if !empty($flagTypes)} {foreach from=$flagTypes item="flagType"}- {$flagType} -<br> {/foreach} {else} <span class="no-flags">{text key="autosuspend+no_flags_checked"}</span> {/if}
+        </td>
+        <td class="color-whitesmoke width-20">{$maxFlags}</td>
+        <td class="color-whitesmoke width-20">{if $suspendModerator==0}{text key="autosuspend+no"}{else}{text key="autosuspend+yes"}{/if}</td>
+        <td class="color-whitesmoke width-20">{$cronFrequency}</td>
+        <td class="color-whitesmoke width-20">{$suspendMessage}</td>
     </tr>
     <tr class="{cycle values='ow_alt1,ow_alt2'}">
+        <td><i>{text key="autosuspend+flags_to_check_explanation"}</i></td>
         <td><i>{text key="autosuspend+admin_page_max_flags_explanation"}</i></td>
+        <td><i>{text key="autosuspend+admin_page_suspend_mods_explanation"}</i></td>
         <td><i>{text key="autosuspend+admin_page_cron_frequency_explanation"}</i></td>
         <td><i>{text key="autosuspend+admin_page_suspend_reason_explanation"}</i></td>
     </tr>
 </table>
 <br>
-<br>
-<h3 class="center-text">{text key="autosuspend+admin_page_update_settings"}</h3><br> {form name='update_settings'}
-<table class="ow_table_1 ow_form ow_automargin center-text">
-    <tr class="ow_alt1">
-        <td class="ow_value"><b>{text key="autosuspend+admin_page_max_flags"}</b></td>
-        <td class="ow_value"><b>{text key="autosuspend+admin_page_cron_frequency"}</b></td>
-        <td class="ow_value"><b>{text key="autosuspend+admin_page_suspend_reason"}</b></td>
+<br> {form name='update_settings'}
+<table class="ow_table_1 ow_form ow_automargin center-text card">
+    <tr class="background-grey">
+        <td colspan="5">
+            <h3 class="center-text white-text"><br>{text key="autosuspend+admin_page_update_settings"}<br><br></h3>
+        </td>
     </tr>
-    <tr class="ow_alt1">
+    <tr class="ow_alt1 font-medium">
+        <td class="ow_value width-20"><b>{text key="autosuspend+admin_page_flags_to_check"}</b></td>
+        <td class="ow_value width-20"><b>{text key="autosuspend+admin_page_max_flags"}</b></td>
+        <td class="ow_value width-20"><b>{text key="autosuspend+admin_page_suspend_mods"}</b></td>
+        <td class="ow_value width-20"><b>{text key="autosuspend+admin_page_cron_frequency"}</b></td>
+        <td class="ow_value width-20"><b>{text key="autosuspend+admin_page_suspend_reason"}</b></td>
+    </tr>
+    <tr class="ow_alt2">
+        <td class="ow_value">{input name='newFlagTypes'}</td>
         <td class="ow_value">{input name='newMaxFlags'}</td>
+        <td class="ow_value">{input name='newSuspendModerator'}</td>
         <td class="ow_value">{input name='newCronFrequency'}</td>
         <td class="ow_value">{input name='newSuspendMessage'}</td>
     </tr>
     <tr>
-        <td class="ow_center" colspan="3">{submit name='add' class='ow_button ow_ic_save'}</td>
+        <td class="ow_center" colspan="5">{submit name='add' class='ow_button ow_ic_save'}</td>
     </tr>
 </table>
 {/form}
