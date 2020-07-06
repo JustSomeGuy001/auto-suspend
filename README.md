@@ -2,9 +2,11 @@
 
 Plugin for Oxwall software. Automatically suspends users who have been flagged a certain number of times.
 
-##  A smart solution for leveraging your userbase to help prevent spam and abusive behavior 
+##  Levarage your userbase to help prevent spam and abusive behavior 
 
-Ultimately, there's no better way to check and verify that spammy or abusive behavior is taking place on your site than by having it checked and verified by humans. This plus allow you to leverage your entire userbase to help you identify and deal with problematic content, by automating the suspension of problem-users flagged by your members.
+There's no better way to prevent spam or abusive behavior than by having content checked and verified by humans. 
+
+This plugin allow you to leverage your entire userbase to help you identify and deal with problematic content, by automating the suspension of problem-users flagged by your members.
 
 ![Screenshot from 2020-07-06 04-39-29](https://user-images.githubusercontent.com/25450448/86573669-b8f48200-bf42-11ea-80cb-f67d0f0ae91f.png)
 
