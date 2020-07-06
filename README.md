@@ -2,7 +2,7 @@
 
 Plugin for Oxwall software. Automatically suspends users who have been flagged a certain number of times.
 
-##  Levarage your userbase to help prevent spam and abusive behavior 
+##  Leverage your userbase to help prevent spam and abusive behavior 
 
 There's no better way to prevent spam or abusive behavior than by having content checked and verified by humans. 
 
